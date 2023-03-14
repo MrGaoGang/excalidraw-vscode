@@ -6,7 +6,7 @@ import {
 import React from "react";
 import ReactDOM from "react-dom";
 import { Base64 } from "js-base64";
-
+import InitLibsJson from './init-libs.json';
 import App from "./App";
 import { sendChangesToVSCode, vscode } from "./vscode";
 import {
@@ -117,8 +117,10 @@ async function main() {
       <React.StrictMode>
         <App
           initialData={initialData}
+          // @ts-ignore
           libraryItems={
-            config.library ? await getLibraryItems(config.library) : []
+          // @ts-ignore
+          InitLibsJson.concat( config.library ? await getLibraryItems(config.library) : [])
           }
           name={config.name}
           viewModeEnabled={config.viewModeEnabled}
