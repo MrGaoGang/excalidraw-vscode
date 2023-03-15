@@ -4,7 +4,7 @@
     "displayName": "Excalidraw Prod",
     "description": "Draw schemas in VS Code using Excalidraw",
     "version": "1.0.1",
-    "publisher": "pomdtr",
+    "publisher": "mrgaogang",
     "engines": {
         "vscode": "^1.63.0"
     },
@@ -25,7 +25,9 @@
     },
     "activationEvents": [
         "workspaceContains:**/*.{excalidraw,excalidraw.svg,excalidraw.png}",
-        "onCustomEditor:editor.excalidraw"
+        "onCustomEditor:editor.excalidraw",
+        "onCommand:excalidraw.createPngImage",
+        "onCommand:excalidraw.createSvgImage"
     ],
     "repository": {
         "type": "git",
@@ -313,13 +315,11 @@
             ],
             "explorer/context": [
                 {
-                    "when": "explorerViewletFocus",
                     "command": "excalidraw.createPngImage",
                     "alt": "",
                     "group": "navigation@99"
                 },
                 {
-                    "when": "explorerViewletFocus",
                     "command": "excalidraw.createSvgImage",
                     "alt": "",
                     "group": "navigation@99"

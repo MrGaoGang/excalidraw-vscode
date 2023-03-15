@@ -105,6 +105,7 @@ async function createExcalidrawImage(uri: vscode.Uri, type: "png" | "svg") {
     );
   }
 
+  vscode.window.showInformationMessage(folderPath)
   const fileName = await vscode.window.showInputBox({
     placeHolder: "Please input filename",
   });
@@ -163,6 +164,8 @@ export function registerCommands(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand("excalidraw.createPngImage", (uri) => {
+      vscode.window.showInformationMessage('执行了啊')
+
       createExcalidrawImage(uri, "png");
     })
   );
