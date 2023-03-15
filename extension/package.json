@@ -1,7 +1,7 @@
 {
-    "name": "excalidraw-editor-prod",
+    "name": "excalidraw-editor-custom",
     "icon": "assets/images/logo.png",
-    "displayName": "Excalidraw Prod",
+    "displayName": "Excalidraw Custom",
     "description": "Draw schemas in VS Code using Excalidraw",
     "version": "1.0.1",
     "publisher": "mrgaogang",

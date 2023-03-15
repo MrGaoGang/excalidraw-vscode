@@ -164,8 +164,6 @@ export function registerCommands(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand("excalidraw.createPngImage", (uri) => {
-      vscode.window.showInformationMessage('执行了啊')
-
       createExcalidrawImage(uri, "png");
     })
   );
